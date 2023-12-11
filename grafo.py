@@ -1,5 +1,7 @@
 import heapq
 from bst import BST
+import networkx as nx
+import matplotlib.pyplot as plt
 
 class Grafo:
     def __init__(self):
@@ -32,6 +34,26 @@ class Grafo:
         print("Registro de Distancias:")
         self.registro_distancias.display()
     
+    def visualizar_grafo(self):
+        G = nx.Graph()
+
+        # Agregar nodos al grafo
+        G.add_nodes_from(self.ciudades)
+
+        # Agregar aristas al grafo
+        for i in range(len(self.ciudades)):
+            for j in range(i+1, len(self.ciudades)):
+                distancia = self.matriz_adyacente[i][j]
+                if distancia > 0:
+                    G.add_edge(self.ciudades[i], self.ciudades[j], weight=distancia)
+
+        # Visualizar el grafo
+        pos = nx.spring_layout(G)  # Puedes ajustar el diseño según tus preferencias
+        labels = nx.get_edge_attributes(G, 'weight')
+        nx.draw(G, pos, with_labels=True)
+        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+        plt.show()
+
 
     def ruta_mas_corta(self, ciudad1, ciudad2):
         # Diccionario para almacenar las distancias mínimas desde el origen a cada ciudad

@@ -23,6 +23,8 @@ if __name__ == "__main__":
     aristas_seleccionadas = grafo.arbol_recubrimiento_minimo()
     print(f'Aristas seleccionadas: {aristas_seleccionadas}')
 
+    grafo.visualizar_grafo()
+
 
 
 
