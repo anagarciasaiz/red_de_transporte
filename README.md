@@ -1,4 +1,6 @@
-link repositorio: https://github.com/anagarciasaiz/red_de_transporte
+Entrega realizada por Ana García y Lidia Velicia  
+  
+Link repositorio: https://github.com/anagarciasaiz/red_de_transporte
 
 # Entrega: Red de Transporte
 Se te ha encargado crear un sistema para optimizar la red de transporte entre ciudades. Debes modelar este problema como un grafo donde cada nodo representa una ciudad y
