@@ -16,7 +16,6 @@ if __name__ == "__main__":
     grafo.mostrar_grafo()
 
 
-    # ejemplo de llamadas a funciones
     ruta, distancia = grafo.ruta_mas_corta("A", "D")
     print(f'Ruta más corta: {ruta}, Distancia: {distancia}')
 

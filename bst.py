@@ -8,14 +8,14 @@ class NodoBST:
 
 class BST:
     def __init__(self):
-        self.root = None #arbol binario de busqueda
+        self.root = None  # arbol binario de busqueda
 
     def insert(self, distancia, ciudades):
-        # Inserta un nuevo nodo en el árbol con una clave (distancia) y un valor (ciudades)
+        '''Inserta un nuevo nodo en el árbol con una clave (distancia) y un valor (ciudades)'''
         self.root = self._insert(distancia, ciudades, self.root)
 
     def _insert(self, distancia, ciudades, nodo):
-        # Función auxiliar para insertar un nodo en el árbol
+        '''Función auxiliar para insertar un nodo en el árbol'''
         if nodo is None:
             return NodoBST(distancia, ciudades)
         if distancia < nodo.distancia:
@@ -25,7 +25,7 @@ class BST:
         return nodo
     
     def display(self):
-        # Muestra el árbol en orden
+        '''Muestra el contenido del árbol en orden'''
         self._display(self.root)
 
     def _display(self, nodo):
